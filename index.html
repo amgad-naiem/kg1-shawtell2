@@ -1,1 +1,124 @@
-<h1>Test</h1>
+<html>
+    <head>
+        <title> Files </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <script>
+
+
+        $(document).ready(function(){
+            $("#datafile").change(function()
+            {
+                var filename = $(this).val().split('\\').pop();;
+                 $("#fileView").val(filename);
+            });
+             $("#myForm").submit(function(){
+              var formData = new FormData($(this)[0]);
+              var file = formData.get('datafile');
+             
+
+            //   function check() {
+            //         $.ajax({
+            //             type: 'POST',
+            //             url: '/check',
+            //             data: "",
+            //             dataType: 'json',
+            //             success: function (data) {
+            //                    $("#result").html(data);  
+            //                    if (data === "")
+            //                     setTimeout(check, 1000); 
+            //             },
+            //             error: function(XMLHttpRequest, textStatus, errorThrown) { 
+            //                  setTimeout(check, 1000); 
+            //             } 
+            //     });
+            // }
+             
+             $.ajax({
+                 url: '/upload',
+                 type: 'POST',
+                 data: file,
+                 async: true,
+                 success: function (data) {
+                    console.log(data);
+                    $("#result").html(data);
+                    // setTimeout(check, 1000);
+                },
+                 cache: false,
+                 contentType: false,
+                 processData: false
+            });
+
+            return false;
+           
+        });
+
+
+         $("#imageForm").submit(function(){
+             var formData = new FormData($(this)[0]);
+             $.ajax({
+                 url: '/plot',
+                 type: 'POST',
+                 data: formData,
+                 async: false,
+                 success: function (data) {
+                    console.log(data);
+                    var img = document.createElement('img');
+                    img.src = data;
+                    document.body.appendChild(img);
+                },
+                cache: false,
+                 contentType: false,
+                 processData: false
+            });
+
+            return false;
+           
+        });
+
+        
+            
+        });
+
+        </script>
+
+        <div class="container">
+        <h2>Upload Files Form</h2>
+        <form id="myForm" enctype="multipart/form-data" method="POST">
+            <div class="input-group">
+                <input id ="fileView" type="text" class="form-control" readonly="">
+                <label class="input-group-btn">
+                    <span class="btn btn-primary">
+                        Browse… <input id="datafile" name="datafile" type="file" style="display: none;" multiple="">
+                    </span>
+                </label>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-default pull-right">Upload</button>
+           
+        </form>
+
+         <div id = "result">
+        </div>
+
+        <div>
+            <h1> Image </h1>
+            <form id = "imageForm" method="POST">
+                <button type="submit" class="btn btn-default">Show Image</button>
+            </form>
+        </div>
+
+        <form action="/selectAllDB">
+            <input class="btn btn-default" type="submit" value="selectAll">
+        </form>
+
+        <form action="/insertDB">
+            <input class="btn btn-default" type="submit" value="insert">
+        </form>
+
+        </div>
+    </body>
+</html>
