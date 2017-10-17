@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<exercise>
+    <rubric><![CDATA[<font size="20"><b>Click and listen. Match.</b></font>]]></rubric>
+    <imagepath>content/pelmanism/assets/images/</imagepath>
+    <audiopath>content/pelmanism/assets/audio/</audiopath>
+    <card audio="u8_jacket.mp3">u8_jacket.swf:u8_jacket.swf</card> 
+    <card audio="u8_skirt.mp3">u8_skirt.swf:u8_skirt.swf</card>
+    <card audio="u8_t-shirt.mp3">u8_t-shirt.swf:u8_t-shirt.swf</card>
+    <card audio="u8_pants.mp3">u8_pants.swf:u8_pants.swf</card>
+    <card audio="u8_shorts.mp3">u8_shorts.swf:u8_shorts.swf</card>
+    <card audio="u8_sandals.mp3">u8_sandals.swf:u8_sandals.swf</card>
+</exercise>

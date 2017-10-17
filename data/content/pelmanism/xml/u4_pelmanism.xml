@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<exercise>
+    <rubric><![CDATA[<font size="20"><b>Click and listen. Match.</b></font>]]></rubric>
+    <imagepath>content/pelmanism/assets/images/</imagepath>
+    <audiopath>content/pelmanism/assets/audio/</audiopath>
+    <card audio="u4_sunny.mp3">u4_sunny.swf:u4_sunny.swf</card> 
+    <card audio="u4_rainy.mp3">u4_rainy.swf:u4_rainy.swf</card>
+    <card audio="u4_windy.mp3">u4_windy.swf:u4_windy.swf</card>
+    <card audio="u4_snowy.mp3">u4_snowy.swf:u4_snowy.swf</card>
+    <card audio="u4_hot.mp3">u4_hot.swf:u4_hot.swf</card>
+    <card audio="u4_cold.mp3">u4_cold.swf:u4_cold.swf</card>
+</exercise>

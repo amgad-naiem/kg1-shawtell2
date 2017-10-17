@@ -1,124 +1,48 @@
-<html>
-    <head>
-        <title> Files </title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    </head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Show & Tell</title>
+<!--[if IE]>
+<link rel="stylesheet" href="data/style/style_IE.css" />
+<![endif]-->
+<!--[if !IE]><!-->
+<link rel="stylesheet" href="data/style/style.css" />
+ <!--<![endif]-->
 
-    <body>
-        <script>
+</head>
 
+<body>
+<div class="boxshadow">
+<div class="container">
+  <div class="header"><img class="padimg" src="data/images/logo.gif" alt="Oxford University Press" id="OUP_Logo" />
+  <img src="data/images/ST_logo.png" alt="Show & Tell" class="fltrt" id="Show & Tell Prototype"  />
+  <!-- end .header --></div>
+    
+  <div class="content">
 
-        $(document).ready(function(){
-            $("#datafile").change(function()
-            {
-                var filename = $(this).val().split('\\').pop();;
-                 $("#fileView").val(filename);
-            });
-             $("#myForm").submit(function(){
-              var formData = new FormData($(this)[0]);
-              var file = formData.get('datafile');
-             
-
-            //   function check() {
-            //         $.ajax({
-            //             type: 'POST',
-            //             url: '/check',
-            //             data: "",
-            //             dataType: 'json',
-            //             success: function (data) {
-            //                    $("#result").html(data);  
-            //                    if (data === "")
-            //                     setTimeout(check, 1000); 
-            //             },
-            //             error: function(XMLHttpRequest, textStatus, errorThrown) { 
-            //                  setTimeout(check, 1000); 
-            //             } 
-            //     });
-            // }
-             
-             $.ajax({
-                 url: '/upload',
-                 type: 'POST',
-                 data: file,
-                 async: true,
-                 success: function (data) {
-                    console.log(data);
-                    $("#result").html(data);
-                    // setTimeout(check, 1000);
-                },
-                 cache: false,
-                 contentType: false,
-                 processData: false
-            });
-
-            return false;
-           
-        });
-
-
-         $("#imageForm").submit(function(){
-             var formData = new FormData($(this)[0]);
-             $.ajax({
-                 url: '/plot',
-                 type: 'POST',
-                 data: formData,
-                 async: false,
-                 success: function (data) {
-                    console.log(data);
-                    var img = document.createElement('img');
-                    img.src = data;
-                    document.body.appendChild(img);
-                },
-                cache: false,
-                 contentType: false,
-                 processData: false
-            });
-
-            return false;
-           
-        });
-
-        
-            
-        });
-
-        </script>
-
-        <div class="container">
-        <h2>Upload Files Form</h2>
-        <form id="myForm" enctype="multipart/form-data" method="POST">
-            <div class="input-group">
-                <input id ="fileView" type="text" class="form-control" readonly="">
-                <label class="input-group-btn">
-                    <span class="btn btn-primary">
-                        Browse… <input id="datafile" name="datafile" type="file" style="display: none;" multiple="">
-                    </span>
-                </label>
-            </div>
-            <br>
-            <button type="submit" class="btn btn-default pull-right">Upload</button>
-           
-        </form>
-
-         <div id = "result">
-        </div>
-
-        <div>
-            <h1> Image </h1>
-            <form id = "imageForm" method="POST">
-                <button type="submit" class="btn btn-default">Show Image</button>
-            </form>
-        </div>
-
-        <form action="/selectAllDB">
-            <input class="btn btn-default" type="submit" value="selectAll">
-        </form>
-
-        <form action="/insertDB">
-            <input class="btn btn-default" type="submit" value="insert">
-        </form>
-
-        </div>
-    </body>
+  <div id="navigation">
+  
+	<a href="data/unit_hello.html"><img src="data/images/unit_hello.jpg" alt="Unit Hello"></a>
+	<a href="data/unit_1.html"><img src="data/images/unit_1.jpg" alt="Unit 1"></a>
+	<a href="data/unit_2.html"><img src="data/images/unit_2.jpg" alt="Unit 2"></a>
+	<a href="data/unit_3.html"><img src="data/images/unit_3.jpg" alt="Unit 3"></a>
+	<a href="data/unit_4.html"><img src="data/images/unit_4.jpg" alt="Unit 4"></a>
+	<a href="data/unit_5.html"><img src="data/images/unit_5.jpg" alt="Unit 5"></a>
+	<a href="data/unit_6.html"><img src="data/images/unit_6.jpg" alt="Unit 6"></a>
+	<a href="data/unit_7.html"><img src="data/images/unit_7.jpg" alt="Unit 7"></a>
+	<a href="data/unit_8.html"><img src="data/images/unit_8.jpg" alt="Unit 8"></a>
+	<a href="data/unit_9.html"><img src="data/images/unit_9.jpg" alt="Unit 9"></a>
+	
+   </div>
+   
+   
+    <!-- end .content --></div>
+  <div class="footer">
+    <p class="fltlft">&copy; Copyright 2014 Oxford University Press</p>
+    <p class="fltrt"><a href="data/licence.html">Licence</a></p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+  <!-- end.boxshadow --></div>
+</body>
 </html>

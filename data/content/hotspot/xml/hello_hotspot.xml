@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<game>
+	<rubricText>
+		<text><![CDATA[<font size="20"><b>Click and listen.</b></font>]]></text>
+	</rubricText>
+	<introAudio url="content/hotspot/assets/intro.mp3" playMe="false"/>
+	  
+	<!--   NOTES for extraGeneralAudio: attribute "included" affects on the soundButton  -->
+	<extraGeneralAudio included="false" url="content/hotspot/assets/bag.mp3"/>
+	<exerciseImage showMe="true" url="content/hotspot/assets/images/hello_hotspot.swf" xpos="0" ypos="0"/>
+
+	<!--
+	NOTES
+	item attr audio: it is playing when user click item;
+	item attr playMe: playing audio when is true;
+	itemText attr showMe: is true when the item is a text;
+	itemText attr bgColor: it is background color(in hex) for the item text. If this is not neccesary leave this attr blank(eg. bgColor="");           
+	label attr showMe: it load label image and show this;
+	-->
+
+	<hot_spots>
+		<item xpos="153" ypos="189" width="48" width="57" height="176" audio="content/hotspot/assets/audio/mum.mp3" playMe="true">
+               <itemText showMe="false" xpos="100" ypos="525" bgColor="0xFFFFFF"><![CDATA[<font size="18">Mom</font>]]></itemText>
+               <label showMe="true" url="content/hotspot/assets/txt_label.swf" xpos="201" ypos="189"><![CDATA[<font size="18">Mom</font>]]></label>
+         </item>
+		<item xpos="97" ypos="193" width="48" height="169" audio="content/hotspot/assets/audio/dad.mp3" playMe="true">
+               <itemText showMe="false" xpos="205" ypos="525" bgColor="0xFFFFFF"><![CDATA[<font size="18">dad</font>]]></itemText>
+               <label showMe="true" url="content/hotspot/assets/txt_label.swf" xpos="52" ypos="163"><![CDATA[<font size="18">Dad</font>]]></label>
+         </item>
+		<item xpos="217" ypos="277" width="58" height="88" audio="content/hotspot/assets/audio/sam.mp3" playMe="true">
+               <itemText showMe="false" xpos="290" ypos="525" bgColor="0xFFFFFF"><![CDATA[<font size="18">sam</font>]]></itemText>
+               <label showMe="true" url="content/hotspot/assets/txt_label.swf" xpos="267" ypos="333"><![CDATA[<font size="18">Sam</font>]]></label>
+         </item>
+		<item xpos="320" ypos="234" width="50" height="88" audio="content/hotspot/assets/audio/may.mp3" playMe="true">
+               <itemText showMe="false" xpos="365" ypos="525" bgColor="0xFFFFFF"><![CDATA[<font size="18">may</font>]]></itemText>
+               <label showMe="true" url="content/hotspot/assets/txt_label.swf" xpos="343" ypos="211"><![CDATA[<font size="18">May</font>]]></label>
+         </item>
+		<item xpos="373" ypos="238" width="90" height="99" audio="content/hotspot/assets/audio/friend.mp3" playMe="true">
+               <itemText showMe="false" xpos="440" ypos="525" bgColor="0xFFFFFF"><![CDATA[<font size="18">friend</font>]]></itemText>
+               <label showMe="true" url="content/hotspot/assets/txt_label.swf" xpos="480" ypos="277"><![CDATA[<font size="18">friend</font>]]></label>
+         </item>
+		<item xpos="593" ypos="99" width="48" height="115" audio="content/hotspot/assets/audio/teacher.mp3" playMe="true">
+               <itemText showMe="false" xpos="100" ypos="525" bgColor="0xFFFFFF"><![CDATA[<font size="18">teacher</font>]]></itemText>
+               <label showMe="true" url="content/hotspot/assets/txt_label.swf" xpos="637" ypos="169"><![CDATA[<font size="18">teacher</font>]]></label>
+         </item>
+		<item xpos="420" ypos="96" width="36" height="48" audio="content/hotspot/assets/audio/teacher.mp3" playMe="true">
+               <itemText showMe="false" xpos="100" ypos="525" bgColor="0xFFFFFF"><![CDATA[<font size="18">teacher</font>]]></itemText>
+               <label showMe="true" url="content/hotspot/assets/txt_label.swf" xpos="294" ypos="87"><![CDATA[<font size="18">teacher</font>]]></label>
+         </item>
+		<item xpos="570" ypos="159" width="21" height="55" audio="content/hotspot/assets/audio/anna.mp3" playMe="true">
+               <itemText showMe="false" xpos="205" ypos="525" bgColor="0xFFFFFF"><![CDATA[<font size="18">anna</font>]]></itemText>
+               <label showMe="true" url="content/hotspot/assets/txt_label.swf" xpos="533" ypos="220"><![CDATA[<font size="18">Anna</font>]]></label>
+         </item>
+		<item xpos="555" ypos="182" width="12" height="19" audio="content/hotspot/assets/audio/bird.mp3" playMe="true">
+               <itemText showMe="false" xpos="290" ypos="525" bgColor="0xFFFFFF"><![CDATA[<font size="18">bird</font>]]></itemText>
+               <label showMe="true" url="content/hotspot/assets/txt_label.swf" xpos="428" ypos="164"><![CDATA[<font size="18">Bird</font>]]></label>
+         </item>
+      	</hot_spots>
+</game>
+
+
+
+
+
+
+
+
+
+
+
+
